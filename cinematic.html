@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Heading Animation</title>
+    <link rel="stylesheet" href="cinematic.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="cinematic-heading">Cinematic</h1>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            let heading = document.getElementById("cinematic-heading");
+            let text = heading.innerText;
+
+            heading.innerHTML = text
+                .split("")
+                .map((letter)=> `<span><span>${letter}</span></span>` )
+                .join("")
+            heading.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
